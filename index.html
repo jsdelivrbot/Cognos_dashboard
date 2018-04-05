@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="src/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- hier begint  -->
+		<div class="header card card-1">
+			<div class="row_header1">
+												<div class="logo"><img tabIndex=0 class=image src="https://werknet.denhaag.nl/style%20library/Branding/components/gdh_suitebar/images/gdh_logo.png"></div>
+												<p class="title">OCW bedrijfsvoeringsdashboard</p>
+			</div>
+			<hr>
+			<div class="row_header2">
+				<button class="button sb" style="background-color:#1D6B34;border: none;">
+					<span><i class="fa fa-bars fa-2x" style="color:white;"></i></span>
+					<span>Filters</span>
+				</button>
+			</div>
+		</div>
+		<!-- hier begint subheader -->
+		<div class="subheader card card-1">
+			<p>Geselecteerde jaar:<span class="selectie_jaar"></span></p>
+			<p>Geselecteerde kostenplaats:<span class="selectie_kpl"></span></p>
+			<p>Geselecteerde kostendrager:<span class="selectie_kdr"></span></p>
+		</div>
+		<!-- hier eindigt subheader -->
+		<!-- hier begingt sidebar -->
+		<div class="sidebar card-5">
+			<div class="row1">Filters</div>
+			<div class="row2"><button class="button prmt">Ververs geselecteerde filters</button></div>
+			<div class="row">
+				<div class="row3">
+					<div class="group">
+						<input id="input_jaar" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Selecteer Jaar</label>
+					</div>
+				</div>
+				<div class="row4">
+					<div class="group">
+						<input id="input_kpl" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Selecteer Kostenplaats organisatie niveau</label>
+					</div>
+				</div>
+				<div class="row5">
+					<div class="group">
+						<input id="input_kdr" type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Selecteer Kostendrager organisatie niveau</label>
+					</div>
+				</div>
+				<div class="row6">
+					<div class="group">
+						<input type="text" required>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label>Name</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- hier eindigt sidebar -->
+		<!-- hier begint de content -->
+		<div class="content">
+			<div class="box a card card-1">Blok A</div>
+			<div class="box b card card-1">Blok B</div>
+			<div class="box c card card-1">
+				<div id="tabs1">
+					<ul>
+						<li>
+							<a href="#tabs-1">
+								<i class="fa fa-line-chart"></i>
+								<span>Lijn grafiek</span>
+							</a>
+						</li>
+						<li>
+							<a href="#tabs-2">
+								<i class="fa fa-table"></i>
+								<span>Tabel</span>
+							</a>
+						</li>
+					</ul>
+					<div id="tabs-1"></div>
+					<div id="tabs-2"></div>
+				</div>
+			</div>
+			<div class="box d card card-1">
+				<div id="tabs2">
+					<ul>
+						<li>
+							<a href="#tabs-1">
+								<i class="fa fa-line-chart"></i>
+								<span>Lijn grafiek</span>
+							</a>
+						</li>
+						<li>
+							<a href="#tabs-2">
+								<i class="fa fa-table"></i>
+								<span>Tabel</span>
+							</a>
+						</li>
+					</ul>
+					<div id="tabs-1"></div>
+					<div id="tabs-2"></div>
+				</div>
+			</div>
+		</div>
+		<!-- hier eindigt content -->
+		<div class="footer">Footer
+		</div>
+	</div>
+	<script src="src/index.js"></script>
+</body>
+</html>
