@@ -231,7 +231,7 @@ hr {
   display: flex;
   flex-direction: row;
   color: white;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   width: 80px;
   margin-left: 5px;
