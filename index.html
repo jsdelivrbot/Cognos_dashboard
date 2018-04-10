@@ -5,7 +5,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/css/uikit.min.css" />
-	<link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.42/js/uikit-icons.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -15,15 +15,53 @@
 	  <!-- hier begint  -->
 		<div class="header card card-1">
 			<div class="row_header1">
-			<div class="logo"><img tabIndex=0 class=image src="https://werknet.denhaag.nl/style%20library/Branding/components/gdh_suitebar/images/gdh_logo.png"></div>
-			<div class="title">OCW bedrijfsvoeringsdashboard</div>
-		</div>
+        <div class="logo"><img tabIndex=0 class=image src="https://werknet.denhaag.nl/style%20library/Branding/components/gdh_suitebar/images/gdh_logo.png"></div>
+        <div class="title">OCW bedrijfsvoeringsdashboard</div>
+		  </div>
 		<hr>
 		<div class="row_header2">
+      <!-- eerste item -->
 			<button class="button sb" style="background-color:#1D6B34;border: none;">
 				<span><i class="fa fa-bars fa-2x" style="color:white;"></i></span>
 				<span>Filters</span>
 			</button>
+      <!-- tweede item -->
+			
+<nav class="uk-navbar-container" uk-navbar>
+	<div class="uk-navbar-left">
+
+		<ul class="uk-navbar-nav">
+			<li>
+				<a href="#">Menu</a>
+				<div class="uk-navbar-dropdown">
+					<ul class="uk-nav uk-navbar-dropdown-nav">
+						<li class="uk-active">
+							<a href="#">Active</a>
+						</li>
+						<li>
+							<a href="#">Item</a>
+						</li>
+						<li class="uk-nav-header">Header</li>
+						<li>
+							<a href="#">Item</a>
+						</li>
+						<li>
+							<a href="#">Item</a>
+						</li>
+						<li class="uk-nav-divider"></li>
+						<li>
+							<a href="#">Item</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+</nav>
+
+
+
 		</div>
 		</div>
 		<!-- hier begint subheader -->
@@ -36,7 +74,7 @@
 		<!-- hier begingt sidebar -->
 		<div class="sidebar card-5">
 			<div class="row1">Filters</div>
-			<div class="row2"><button class="button prmt">Ververs geselecteerde filters</button></div>
+			<div class="row2"><button class="button prmt uk-button uk-button-primary">Ververs geselecteerde filters</button></div>
 			<div class="row">
 				<div class="row3">
 					<div class="group">
@@ -65,7 +103,71 @@
 		<input id=cascadingprompt type="text">
     <div class="row6">
       <!-- hier begint cascading prompt -->
-<DIV id=PRMT_div class="allewaarden">
+        <!-- hier begint accordion voor het verbergen van casacading prompt -->
+        <ul uk-accordion>
+          <!-- eerste accordion item -->
+          <li class="uk-open">
+            <a class="uk-accordion-title" href="#">selecteer kostenplaats</a>
+            <div class="uk-accordion-content">
+            <SELECT id=PRMT_niv1 class="clsSelectControl pv" aria-invalid=false style="WIDTH: auto" multiple size=11>
+                    <OPTION value=BZZZ100 dv="BZZZ100-Org 3 - GGD Haaglanden">BZZZ100-Org&nbsp;3&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                    <OPTION value=BZZZ300 dv="BZZZ300-Org 3 - Sport">BZZZ300-Org&nbsp;3&nbsp;-&nbsp;Sport</OPTION>
+                    <OPTION value=BZZZ500 dv="BZZZ500-Org 3 - Cultuur">BZZZ500-Org&nbsp;3&nbsp;-&nbsp;Cultuur</OPTION>
+                    <OPTION value=BZZZ600 dv="BZZZ600-Org 3 - Participatie Zorg &amp; Jeugd">BZZZ600-Org&nbsp;3&nbsp;-&nbsp;Participatie&nbsp;Zorg&nbsp;&amp;&nbsp;Jeugd</OPTION>
+                    <OPTION value=BZZZ000 dv="BZZZ000-Org 3 - Centraal">BZZZ000-Org&nbsp;3&nbsp;-&nbsp;Centraal</OPTION>
+                    <OPTION value="" dv="-" nullUse="1">-</OPTION>
+                    <OPTION value=BZZZ400 dv="BZZZ400-Org 3 - Stedelijk Onderwijs">BZZZ400-Org&nbsp;3&nbsp;-&nbsp;Stedelijk&nbsp;Onderwijs</OPTION>
+                </SELECT>
+            </div>
+          </li>
+<!-- tweede accordion item -->
+          <li>
+            <a class="uk-accordion-title" href="#">Item 2</a>
+            <div class="uk-accordion-content">
+              <h3>Kostenplaats niv 2</h3>
+              <SELECT id=PRMT_niv2 class="clsSelectControl pv" aria-invalid=false style="WIDTH: auto" multiple size=11>
+                      <OPTION value=BZZ300A dv="BZZ300A-Org 2 - Dir Alg Sport - Sport">BZZ300A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;Sport&nbsp;-&nbsp;Sport</OPTION>
+                      <OPTION value=BZZ500B dv="BZZ500B-Org 2 - PG Cultuurbeleid - Cultuur">BZZ500B-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Cultuurbeleid&nbsp;-&nbsp;Cultuur</OPTION>
+                      <OPTION value=BZZ600H dv="BZZ600H-Org 2 - PG Mediabeleid en media infrastructuur - PZJ">BZZ600H-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Mediabeleid&nbsp;en&nbsp;media&nbsp;infrastructuur&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ300D dv="BZZ300D-PG Topsport, Sportcampus &amp; Evenementen">BZZ300D-PG&nbsp;Topsport,&nbsp;Sportcampus&nbsp;&amp;&nbsp;Evenementen</OPTION>
+                      <OPTION value=BZZ100D dv="BZZ100D-Org 2 - PG I&amp;H - GGD Haaglanden">BZZ100D-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;I&amp;H&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ400D dv="BZZ400D-Org 2 - PG Leerlingzaken - SO">BZZ400D-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Leerlingzaken&nbsp;-&nbsp;SO</OPTION>
+                      <OPTION value=BZZ300B dv="BZZ300B-PG Sportbeleid &amp; Activering">BZZ300B-PG&nbsp;Sportbeleid&nbsp;&amp;&nbsp;Activering</OPTION>
+                      <OPTION value=BZZ100B dv="BZZ100B-Org 2 - Advies &amp; Coördinatie GGDH - GGD Haaglanden">BZZ100B-Org&nbsp;2&nbsp;-&nbsp;Advies&nbsp;&amp;&nbsp;Coördinatie&nbsp;GGDH&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ100F dv="BZZ100F-Org 2 - PG E&amp;G - GGD Haaglanden">BZZ100F-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;E&amp;G&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ400G dv="BZZ400G-Org 2 - PG Jeugdbeleid - SOJ">BZZ400G-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Jeugdbeleid&nbsp;-&nbsp;SOJ</OPTION>
+                      <OPTION value=BZZ400E dv="BZZ400E-Org 2 - PG Onderwijszaken - SO">BZZ400E-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Onderwijszaken&nbsp;-&nbsp;SO</OPTION>
+                      <OPTION value=BZZ400B dv="BZZ400B-Org 2 - PG Onderwijsbeleid - SO">BZZ400B-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Onderwijsbeleid&nbsp;-&nbsp;SO</OPTION>
+                      <OPTION value=BZZ100A dv="BZZ100A-Org 2 - Dir Alg GGDH - GGD Haaglanden">BZZ100A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;GGDH&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ400A dv="BZZ400A-Org 2 - Dir Alg SO - SO">BZZ400A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;SO&nbsp;-&nbsp;SO</OPTION>
+                      <OPTION value=BZZ100G dv="BZZ100G-Org 2 - PG Ambulancezorg - GGD Haaglanden">BZZ100G-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Ambulancezorg&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ600C dv="BZZ600C-Org 2 - PG Jeugd - PZJ">BZZ600C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Jeugd&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ600D dv="BZZ600D-Org 2 - PG Participatie - PZJ">BZZ600D-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Participatie&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ600E dv="BZZ600E-Org 2 - PG Zorg en Volksgez - PZJ">BZZ600E-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Zorg&nbsp;en&nbsp;Volksgez&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ600B dv="BZZ600B-Org 2 - SG PZJ - PZJ">BZZ600B-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;PZJ&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ600G dv="BZZ600G-Org. 2 - Individuele Voorzieningen - PZJ">BZZ600G-Org.&nbsp;2&nbsp;-&nbsp;Individuele&nbsp;Voorzieningen&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ400C dv="BZZ400C-Org 2 - PG Onderwijshuisvesting - SO">BZZ400C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Onderwijshuisvesting&nbsp;-&nbsp;SO</OPTION>
+                      <OPTION value=BZZ000E dv="BZZ000E-Org 2 - SG P&amp;O / Alg Zaken - Centraal">BZZ000E-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;P&amp;O&nbsp;/&nbsp;Alg&nbsp;Zaken&nbsp;-&nbsp;Centraal</OPTION>
+                      <OPTION value=BZZ600A dv="BZZ600A-Org 2 - Dir Alg PZJ - PZJ">BZZ600A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;PZJ&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ100H dv="BZZ100H-Org 2 - PG GC&amp;T - GGD Haaglanden">BZZ100H-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;GC&amp;T&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ600F dv="BZZ600F-Org 2 - TUO doorontwikkeling WMO - PZJ">BZZ600F-Org&nbsp;2&nbsp;-&nbsp;TUO&nbsp;doorontwikkeling&nbsp;WMO&nbsp;-&nbsp;PZJ</OPTION>
+                      <OPTION value=BZZ400F dv="BZZ400F-Org 2 - PG CJG - SOJ">BZZ400F-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;CJG&nbsp;-&nbsp;SOJ</OPTION>
+                      <OPTION value=BZZ000C dv="BZZ000C-Org 2 - SG F&amp;C - Centraal">BZZ000C-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;F&amp;C&nbsp;-&nbsp;Centraal</OPTION>
+                      <OPTION value=BZZ000A dv="BZZ000A-Org 2 - Directie Algemeen - Centraal">BZZ000A-Org&nbsp;2&nbsp;-&nbsp;Directie&nbsp;Algemeen&nbsp;-&nbsp;Centraal</OPTION>
+                      <OPTION value="" dv="-" nullUse="1">-</OPTION>
+                      <OPTION value=BZZ100C dv="BZZ100C-Org 2 - PG OGGZ - GGD Haaglanden">BZZ100C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;OGGZ&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ000B dv="BZZ000B-Org 2 - SG OS&amp;P - Centraal">BZZ000B-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;OS&amp;P&nbsp;-&nbsp;Centraal</OPTION>
+                      <OPTION value=BZZ300C dv="BZZ300C-Org 2 - PG Sportvoorzieningen - Sport">BZZ300C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Sportvoorzieningen&nbsp;-&nbsp;Sport</OPTION>
+                      <OPTION value=BZZ100E dv="BZZ100E-Org 2 - PG JGZ - GGD Haaglanden">BZZ100E-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;JGZ&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
+                      <OPTION value=BZZ000D dv="BZZ000D-Org 2 - SG Communicatie en Webbeheer - Centraal">BZZ000D-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;Communicatie&nbsp;en&nbsp;Webbeheer&nbsp;-&nbsp;Centraal</OPTION>
+                      <OPTION value=BZZ500A dv="BZZ500A-Org 2 - Dir Alg Cultuur - Cultuur">BZZ500A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;Cultuur&nbsp;-&nbsp;Cultuur</OPTION>
+                      <OPTION value=BZZ000F dv="BZZ000F-Org 2 - SG IM&amp;S - Centraal">BZZ000F-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;IM&amp;S&nbsp;-&nbsp;Centraal</OPTION>
+                      <OPTION value=BZZ400H dv="BZZ400H-Org. 2 - PG Veilig Thuis - SOJ">BZZ400H-Org.&nbsp;2&nbsp;-&nbsp;PG&nbsp;Veilig&nbsp;Thuis&nbsp;-&nbsp;SOJ</OPTION>
+                  </SELECT>
+            </div>
+          </li>
+        </ul>
+  <DIV id=PRMT_div class="allewaarden">
 	<h3>Alle waarden</h3>
 	<SELECT id=PRMT_alle class="clsSelectControl pv" aria-invalid=false style="WIDTH: 200px" multiple size=11>
         <OPTION value=BZZZ100|BZZ100C|BZ1300A dv="BZZZ100|BZZ100C|BZ1300A">BZZZ100|BZZ100C|BZ1300A</OPTION>
@@ -166,61 +268,7 @@
         <OPTION value=BZZZ400|BZZ400F|BZ4903A dv="BZZZ400|BZZ400F|BZ4903A">BZZZ400|BZZ400F|BZ4903A</OPTION>
         <OPTION value=BZZZ300|BZZ300C|BZ3730A dv="BZZZ300|BZZ300C|BZ3730A">BZZZ300|BZZ300C|BZ3730A</OPTION>
     </SELECT>
-</DIV>
-<DIV id=PRMT_div>
-	<h3>Kostenplaats niv 1</h3>
-	<SELECT id=PRMT_niv1 class="clsSelectControl pv" aria-invalid=false style="WIDTH: auto" multiple size=11>
-        <OPTION value=BZZZ100 dv="BZZZ100-Org 3 - GGD Haaglanden">BZZZ100-Org&nbsp;3&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZZ300 dv="BZZZ300-Org 3 - Sport">BZZZ300-Org&nbsp;3&nbsp;-&nbsp;Sport</OPTION>
-        <OPTION value=BZZZ500 dv="BZZZ500-Org 3 - Cultuur">BZZZ500-Org&nbsp;3&nbsp;-&nbsp;Cultuur</OPTION>
-        <OPTION value=BZZZ600 dv="BZZZ600-Org 3 - Participatie Zorg &amp; Jeugd">BZZZ600-Org&nbsp;3&nbsp;-&nbsp;Participatie&nbsp;Zorg&nbsp;&amp;&nbsp;Jeugd</OPTION>
-        <OPTION value=BZZZ000 dv="BZZZ000-Org 3 - Centraal">BZZZ000-Org&nbsp;3&nbsp;-&nbsp;Centraal</OPTION>
-        <OPTION value="" dv="-" nullUse="1">-</OPTION>
-        <OPTION value=BZZZ400 dv="BZZZ400-Org 3 - Stedelijk Onderwijs">BZZZ400-Org&nbsp;3&nbsp;-&nbsp;Stedelijk&nbsp;Onderwijs</OPTION>
-    </SELECT>
-</DIV>
-<DIV id=PRMT_div>
-	<h3>Kostenplaats niv 2</h3>
-	<SELECT id=PRMT_niv2 class="clsSelectControl pv" aria-invalid=false style="WIDTH: auto" multiple size=11>
-        <OPTION value=BZZ300A dv="BZZ300A-Org 2 - Dir Alg Sport - Sport">BZZ300A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;Sport&nbsp;-&nbsp;Sport</OPTION>
-        <OPTION value=BZZ500B dv="BZZ500B-Org 2 - PG Cultuurbeleid - Cultuur">BZZ500B-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Cultuurbeleid&nbsp;-&nbsp;Cultuur</OPTION>
-        <OPTION value=BZZ600H dv="BZZ600H-Org 2 - PG Mediabeleid en media infrastructuur - PZJ">BZZ600H-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Mediabeleid&nbsp;en&nbsp;media&nbsp;infrastructuur&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ300D dv="BZZ300D-PG Topsport, Sportcampus &amp; Evenementen">BZZ300D-PG&nbsp;Topsport,&nbsp;Sportcampus&nbsp;&amp;&nbsp;Evenementen</OPTION>
-        <OPTION value=BZZ100D dv="BZZ100D-Org 2 - PG I&amp;H - GGD Haaglanden">BZZ100D-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;I&amp;H&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ400D dv="BZZ400D-Org 2 - PG Leerlingzaken - SO">BZZ400D-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Leerlingzaken&nbsp;-&nbsp;SO</OPTION>
-        <OPTION value=BZZ300B dv="BZZ300B-PG Sportbeleid &amp; Activering">BZZ300B-PG&nbsp;Sportbeleid&nbsp;&amp;&nbsp;Activering</OPTION>
-        <OPTION value=BZZ100B dv="BZZ100B-Org 2 - Advies &amp; Coördinatie GGDH - GGD Haaglanden">BZZ100B-Org&nbsp;2&nbsp;-&nbsp;Advies&nbsp;&amp;&nbsp;Coördinatie&nbsp;GGDH&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ100F dv="BZZ100F-Org 2 - PG E&amp;G - GGD Haaglanden">BZZ100F-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;E&amp;G&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ400G dv="BZZ400G-Org 2 - PG Jeugdbeleid - SOJ">BZZ400G-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Jeugdbeleid&nbsp;-&nbsp;SOJ</OPTION>
-        <OPTION value=BZZ400E dv="BZZ400E-Org 2 - PG Onderwijszaken - SO">BZZ400E-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Onderwijszaken&nbsp;-&nbsp;SO</OPTION>
-        <OPTION value=BZZ400B dv="BZZ400B-Org 2 - PG Onderwijsbeleid - SO">BZZ400B-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Onderwijsbeleid&nbsp;-&nbsp;SO</OPTION>
-        <OPTION value=BZZ100A dv="BZZ100A-Org 2 - Dir Alg GGDH - GGD Haaglanden">BZZ100A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;GGDH&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ400A dv="BZZ400A-Org 2 - Dir Alg SO - SO">BZZ400A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;SO&nbsp;-&nbsp;SO</OPTION>
-        <OPTION value=BZZ100G dv="BZZ100G-Org 2 - PG Ambulancezorg - GGD Haaglanden">BZZ100G-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Ambulancezorg&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ600C dv="BZZ600C-Org 2 - PG Jeugd - PZJ">BZZ600C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Jeugd&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ600D dv="BZZ600D-Org 2 - PG Participatie - PZJ">BZZ600D-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Participatie&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ600E dv="BZZ600E-Org 2 - PG Zorg en Volksgez - PZJ">BZZ600E-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Zorg&nbsp;en&nbsp;Volksgez&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ600B dv="BZZ600B-Org 2 - SG PZJ - PZJ">BZZ600B-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;PZJ&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ600G dv="BZZ600G-Org. 2 - Individuele Voorzieningen - PZJ">BZZ600G-Org.&nbsp;2&nbsp;-&nbsp;Individuele&nbsp;Voorzieningen&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ400C dv="BZZ400C-Org 2 - PG Onderwijshuisvesting - SO">BZZ400C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Onderwijshuisvesting&nbsp;-&nbsp;SO</OPTION>
-        <OPTION value=BZZ000E dv="BZZ000E-Org 2 - SG P&amp;O / Alg Zaken - Centraal">BZZ000E-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;P&amp;O&nbsp;/&nbsp;Alg&nbsp;Zaken&nbsp;-&nbsp;Centraal</OPTION>
-        <OPTION value=BZZ600A dv="BZZ600A-Org 2 - Dir Alg PZJ - PZJ">BZZ600A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;PZJ&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ100H dv="BZZ100H-Org 2 - PG GC&amp;T - GGD Haaglanden">BZZ100H-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;GC&amp;T&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ600F dv="BZZ600F-Org 2 - TUO doorontwikkeling WMO - PZJ">BZZ600F-Org&nbsp;2&nbsp;-&nbsp;TUO&nbsp;doorontwikkeling&nbsp;WMO&nbsp;-&nbsp;PZJ</OPTION>
-        <OPTION value=BZZ400F dv="BZZ400F-Org 2 - PG CJG - SOJ">BZZ400F-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;CJG&nbsp;-&nbsp;SOJ</OPTION>
-        <OPTION value=BZZ000C dv="BZZ000C-Org 2 - SG F&amp;C - Centraal">BZZ000C-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;F&amp;C&nbsp;-&nbsp;Centraal</OPTION>
-        <OPTION value=BZZ000A dv="BZZ000A-Org 2 - Directie Algemeen - Centraal">BZZ000A-Org&nbsp;2&nbsp;-&nbsp;Directie&nbsp;Algemeen&nbsp;-&nbsp;Centraal</OPTION>
-        <OPTION value="" dv="-" nullUse="1">-</OPTION>
-        <OPTION value=BZZ100C dv="BZZ100C-Org 2 - PG OGGZ - GGD Haaglanden">BZZ100C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;OGGZ&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ000B dv="BZZ000B-Org 2 - SG OS&amp;P - Centraal">BZZ000B-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;OS&amp;P&nbsp;-&nbsp;Centraal</OPTION>
-        <OPTION value=BZZ300C dv="BZZ300C-Org 2 - PG Sportvoorzieningen - Sport">BZZ300C-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;Sportvoorzieningen&nbsp;-&nbsp;Sport</OPTION>
-        <OPTION value=BZZ100E dv="BZZ100E-Org 2 - PG JGZ - GGD Haaglanden">BZZ100E-Org&nbsp;2&nbsp;-&nbsp;PG&nbsp;JGZ&nbsp;-&nbsp;GGD&nbsp;Haaglanden</OPTION>
-        <OPTION value=BZZ000D dv="BZZ000D-Org 2 - SG Communicatie en Webbeheer - Centraal">BZZ000D-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;Communicatie&nbsp;en&nbsp;Webbeheer&nbsp;-&nbsp;Centraal</OPTION>
-        <OPTION value=BZZ500A dv="BZZ500A-Org 2 - Dir Alg Cultuur - Cultuur">BZZ500A-Org&nbsp;2&nbsp;-&nbsp;Dir&nbsp;Alg&nbsp;Cultuur&nbsp;-&nbsp;Cultuur</OPTION>
-        <OPTION value=BZZ000F dv="BZZ000F-Org 2 - SG IM&amp;S - Centraal">BZZ000F-Org&nbsp;2&nbsp;-&nbsp;SG&nbsp;IM&amp;S&nbsp;-&nbsp;Centraal</OPTION>
-        <OPTION value=BZZ400H dv="BZZ400H-Org. 2 - PG Veilig Thuis - SOJ">BZZ400H-Org.&nbsp;2&nbsp;-&nbsp;PG&nbsp;Veilig&nbsp;Thuis&nbsp;-&nbsp;SOJ</OPTION>
-    </SELECT>
-</DIV>
+  </DIV>
 </div>
 <!-- hier eindigt cascading prompt -->
 			</div>
@@ -229,51 +277,29 @@
 		<!-- hier begint de content -->
 		<div class="content">
 			<div class="box a card card-1">
-		<img src="data:image/jpeg;base64,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" alt="">
+		<img src="src/img/bulletchart1.png" alt="">
       </div>
-			<div class="box b card card-1">Blok B
-        <img src="src/img/test_dashboard.png" alt="">
+			<div class="box b card card-1">
+        <img src="src/img/bulletchart2.png" alt="">
       </div>
-			<div class="box c card card-1">
-				<div id="tabs1">
-					<ul>
-						<li>
-							<a href="#tabs-1">
-								<i class="fa fa-line-chart"></i>
-								<span>Lijn grafiek</span>
-							</a>
-						</li>
-						<li>
-							<a href="#tabs-2">
-								<i class="fa fa-table"></i>
-								<span>Tabel</span>
-							</a>
-						</li>
-					</ul>
-					<div id="tabs-1"></div>
-					<div id="tabs-2"></div>
-				</div>
-			</div>
-			<div class="box d card card-1">
-				<div id="tabs2">
-					<ul>
-						<li>
-							<a href="#tabs-1">
-								<i class="fa fa-line-chart"></i>
-								<span>Lijn grafiek</span>
-							</a>
-						</li>
-						<li>
-							<a href="#tabs-2">
-								<i class="fa fa-table"></i>
-								<span>Tabel</span>
-							</a>
-						</li>
-					</ul>
-					<div id="tabs-1"></div>
-					<div id="tabs-2"></div>
-				</div>
-			</div>
+      <div class="box c card card-1">
+        <ul uk-tab="animation: uk-animation-kenburns">
+          <li>
+            <a href="#"><span><i class="fa fa-line-chart"></i></span>Lijn grafiek</a>
+          </li>
+          <li>
+            <a href="#"><span><i class="fa fa-table"></i></span>Tabel</a>
+          </li>
+        </ul>
+
+        <ul class="uk-switcher uk-margin">
+          <p>
+            <img src="src/img/test_dashboard2.png" alt="">
+          </p>
+          <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        </ul>
+          </div>
+      <div class="box d card card-1"></div>
 		</div>
 		<!-- hier eindigt content -->
 		<div class="footer">Footer

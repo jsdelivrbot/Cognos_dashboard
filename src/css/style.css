@@ -34,7 +34,7 @@
   grid-gap: 10px;
   z-index: 1;
   padding: 5px;
-  grid-template-areas: "boxa boxa boxb boxb" "boxc boxc boxd boxd";
+  grid-template-areas: "boxa boxa boxb boxb" "boxc boxc boxd boxd" "boxe boxe boxf boxf";
 }
 
 .footer {
@@ -46,17 +46,21 @@
 
 .box.a {
   grid-area: boxa;
-  height: 200px; /* dit is gewoon een test */
   width: 40vw;
+  display: flex;
+  padding: 20px;
 }
 
 .box.b {
   grid-area: boxb;
   width: 40vw;
+  display: flex;
+  padding: 20px;
 }
 
 .box.c {
   grid-area: boxc;
+  padding: 20px;
 }
 
 .box.d {
