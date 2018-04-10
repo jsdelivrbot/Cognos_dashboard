@@ -24,7 +24,7 @@
   grid-row: row 2 / span 3;
   z-index: 3;
   background-color: rgba(29, 107, 52, 0.7);
-  visibility: visible;
+  visibility: hidden;
 }
 
 .content {
@@ -124,6 +124,10 @@
 
 #PRMT_div {
   margin: 10px;
+}
+
+.allewaarden {
+  display: none;
 }
 
 /* ------------------------------- */
