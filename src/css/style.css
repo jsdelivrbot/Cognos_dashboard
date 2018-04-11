@@ -229,9 +229,8 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   height: 50px;
+  padding: 5px;
 }
-
-
 
 .subheader > p {
   margin-left: 10px;
@@ -254,5 +253,28 @@ hr {
   align-items: center;
   justify-content: space-between;
   width: 80px;
-  margin-left: 5px;
+}
+
+/*------------------------------*/
+
+.uk-navbar-container {
+height: 30px;
+align-self: flex-start;
+margin-top: 8px;
+margin-right: 5px;
+color: red;
+}
+
+
+.tussenblok {
+  /*border: 1px solid red; */
+  flex-grow: 2;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background-color: #1d6b34;
+}
+
+.uk-navbar-nav>li >a {
+  color: white;
 }
