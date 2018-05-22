@@ -24,7 +24,7 @@
   grid-row: row 2 / span 3;
   z-index: 3;
   background-color: rgba(29, 107, 52, 0.7);
-  visibility: visible;
+  visibility: hidden;
 }
 
 .content {
@@ -277,4 +277,13 @@ color: red;
 
 .uk-navbar-nav>li >a {
   color: white;
+}
+
+iframe {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
